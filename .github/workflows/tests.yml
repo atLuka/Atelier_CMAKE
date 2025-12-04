@@ -86,9 +86,9 @@ jobs:
           ./src/calculator car 5
   Deployment:
     runs-on: ubuntu-latest
-    needs: Compilation
+    needs: [Compilation, Test_Add, Test_Sub, Test_Mul, Test_Div, Test_Car]
     steps:
-     - name : Echo 
+     - name : Echo
        run : |
         echo Déploiement de la solution
 
